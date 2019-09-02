@@ -18,7 +18,7 @@
 - **Django Version:** Django2.1
 
 - **开发工具:** Pycharm 2018
- 
+
 - **数据库:** Django默认的sqlite3
 
 ### 下载运行
@@ -34,6 +34,8 @@
 - #### 启动
 
 ## 预览图
+
+![]()
 
 ![首页](https://github.com/benjieqiang/images/blob/master/1567420535201.png)
 
