@@ -1,0 +1,107 @@
+/*-----problemStart--------*/
+.width-97 {
+    width: 159px;
+}
+.problem-main dl dt span{
+	font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+.introduce{
+	height: auto;
+	overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.introduce-title-wrap{
+    background: url(../images/orige_03.png) 0px 7px repeat-x;
+	height:20px;
+	margin:30px 0px;
+}
+.introduce-title{
+	height: 30px;
+	font-size: 24px;
+	color: #f90;
+	margin:0px auto;
+	background-color: #fff;
+	position: relative;
+	padding: 0px 24px;
+	text-align: center;
+}
+
+.radius-left {
+    position: absolute;
+    left: -4px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f90;
+}
+.radius-right {
+    position: absolute;
+    right: -4px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f90;
+}
+.problem-container {
+	width: 980px;
+	height: auto;
+	overflow: hidden;
+	margin:0 auto;
+}
+.problem-main{
+	margin-bottom: 60px;
+	height: auto;
+	overflow: hidden;
+}
+.problem-main h4{
+	padding-left: 30px;
+	background:url(../images/qs-icon_03.png) left center no-repeat;
+	font-size: 18px;
+}
+.problem-main .problem-left{
+	float: left;
+	width: 450px;
+	margin-right: 40px;
+}
+.problem-main .problem-right{
+	float: left;
+	width: 450px;
+}
+.problem-main dl{
+	width: 450px;
+	margin-bottom: 20px;
+    padding-left: 30px;
+}
+.problem-main dl dt{
+	cursor: pointer;
+	display: block;
+}
+.problem-main dl dt .qz-question{
+	background-color: #F1D09F;
+	padding:1px 2px;
+	color:#fff;
+	float: left;
+	margin-right: 10px;
+}
+.problem-main dl dd{
+	padding: 10px;
+	background-color: #f6f6f6;
+	position: relative;
+	border-radius: 0px 4px 4px 4px;
+	margin-left: 0px;
+	margin-top: 20px;
+	width: 430px;
+	display: none;
+}
+.problem-main dl dd .answer-jt{
+	width: 7px;
+	height: 10px;
+	position: absolute;
+	top:-10px;
+	left: 0px;
+	background: url(../images/jt_03.png) no-repeat;
+}
+/*-----problemEnd--------*/

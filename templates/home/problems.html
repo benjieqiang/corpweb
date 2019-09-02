@@ -1,0 +1,103 @@
+{% extends 'master/layout.html' %}
+{% block title %}
+    常见问题
+{% endblock %}
+{% block css %}
+    <style>
+        .problem-container{
+            width:980px;
+            height:auto;
+            overflow:hidden;
+            margin:0 auto;
+        }
+        .problem-container .introduce h4{
+            text-align:center;
+        }
+        .problem-main{
+            margin-bottom:60px;
+            height:auto;
+            overflow:hidden;
+        }
+        .problem-left{
+            float:left;
+            width:450px;
+            margin-right:40px;
+        }
+        .problem-right{
+            float:left;
+            width:450px;
+            margin-right:40px;
+        }
+        .problem-main dl dd{
+            padding: 10px;
+            background-color: #f6f6f6;
+            position: relative;
+            border-radius: 0px 4px 4px 4px;
+            margin-left: 0px;
+            margin-top: 20px;
+            width: 430px;
+            display: none;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="problem-container">
+        <div class="introduce">
+            <h4>常见问题</h4>
+        </div>
+        <div class="problem-main">
+            <div class="problem-left">
+                <h4>课程相关问题</h4>
+                <dl>
+                    <dt>
+                        <div class="qz-question">Q<sub>1</sub></div>
+                        <span>我没有基础可以参加学习吗？</span>
+                    </dt>
+                    <dd>
+                        必须可以，老男孩的课程分为初级、中级、高级，适用小白或已经工作多年的同学。
+                        <div class="answer-jt"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <div class="qz-question">Q<sub>2</sub></div>
+                        <span>我没有基础可以参加学习吗？</span>
+                    </dt>
+                    <dd>
+                        必须可以，老男孩的课程分为初级、中级、高级，适用小白或已经工作多年的同学。
+                        <div class="answer-jt"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="problem-right">
+                <h4>报名及费用问题</h4>
+    		<dl>
+    			<dt>
+    				<div class="qz-question">Q<sub>1</sub></div>
+                    <span>请问如何报名？</span>
+    			</dt>
+    			<dd>
+    				 详情咨询客服
+    				<div class="answer-jt"></div>
+    			</dd>
+    		</dl>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('dt').click(function () {
+                if($(this).next().is(':visible')){
+                    $(this).next().hide();
+                    console.log(this);
+                }else{
+                    $(this).next().show()
+                }
+            })
+        })
+    </script>
+{% endblock %}

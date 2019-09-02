@@ -1,0 +1,97 @@
+{% extends "master/layout.html" %}
+{% load myTag %}
+{% block title %}
+    师资队伍
+{% endblock %}
+{% block css %}
+    <style>
+        .wrap{
+            width:1000px;
+            margin: 0 auto;
+            font-size:12px;
+            font-family: "Microsoft Yahei", "Simsun";
+        }
+        .headline-center{
+            text-align:center;
+            margin-bottom:60px;
+        }
+        .headline-center h2{
+            margin-bottom:20px;
+            padding-bottom:15px;
+        }
+        .wrap .waterfall{
+
+        }
+        .wrap .waterfall  .column-flow{
+            width:25%;
+            float:left;
+        }
+        .wrap .waterfall  .item img{
+            width:100%;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="wrap clearfix">
+        <div class="headline-center text-center">
+             <h2>花瓣网的瀑布流作业</h2>
+        </div>
+        <div class="waterfall">
+{#                {% for item in teacher_list %}#}
+{#                    <div class="item">#}
+{#                        <img src="/{{ item.pic }}" alt="">#}
+{#                        <p>{{ item.name }}</p>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+        <div class="column-flow">
+        <!--1%4 = 1-->
+        <!--2%4 = 2-->
+        <!--3%4 = 3-->
+        <!--4%4 = 0-->
+            {% for item in teacher_list %}
+                {% if forloop.counter|t_filter:'4,1' %}
+                    <div class="item">
+                        <img src="/{{ item.pic }}" alt="">
+                        <p>{{ item.name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="column-flow">
+            {% for item in teacher_list %}
+                {% if forloop.counter|t_filter:'4,2' %}
+                    <div class="item">
+                        <img src="/{{ item.pic }}" alt="">
+                        <p>{{ item.name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="column-flow">
+            {% for item in teacher_list %}
+                {% if forloop.counter|t_filter:'4,3' %}
+                    <div class="item">
+                        <img src="/{{ item.pic }}" alt="">
+                        <p>{{ item.name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+          <div class="column-flow">
+            {% for item in teacher_list %}
+                {% if forloop.counter|t_filter:'4,0' %}
+                    <div class="item">
+                        <img src="/{{ item.pic }}" alt="">
+                        <p>{{ item.name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

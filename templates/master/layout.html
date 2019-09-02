@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/commons.css">
+{#    <link rel="stylesheet" href="/static/css/plugin.css">#}
+    {% block css %} {% endblock %}
+</head>
+<body>
+    <div class="pg-header">
+        <div class="header">
+        <div class="wrap clearfix">
+                <div class="logo">
+                    <img src="/static/images/logo.png" alt="">
+                </div>
+                <nav>
+                     <ul>
+                        <li><a href="/index/">首页</a></li>
+                        <li><a href="/teacher/">师资团队</a></li>
+                        <li><a href="/students/">学员就业</a></li>
+                        <li><a href="/video/">在线视频</a></li>
+                        <li><a href="">开源软件</a></li>
+                        <li><a href="/problems/">常见问题</a></li>
+                        <li><a href="/about/">关于我们</a></li>
+                    </ul>
+                </nav>
+                <div class="info">
+                    <div class="lists">
+                        <!--放置登录注册按钮-->
+                        <span></span>
+                        <!--联系方式<span> 来组合行内元素，以便通过样式来格式化它们。-->
+                         <span class="phone">
+                             <!--引用bootstrap电话标签-->
+                        <i class="glyphicon glyphicon-earphone "></i>
+                        <span>010-11111111</span>
+                    </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pg-body">
+        <!--这里用来在对应分页写内容-->
+        {% block content %}{% endblock %}
+    </div>
+    <div class="pg-footer">
+        <div class="wrap">
+            <div class="footer-block">
+                <p>
+                    <a href="">关于我们</a>
+                    <span class="fline">|</span>
+                    <a href="">联系我们</a>
+                    <span class="fline">|</span>
+                    <a href="">招贤纳士</a>
+                    <span class="fline">|</span>
+                    <a href="">老男孩教育</a>
+                    <span class="fline">|</span>
+                    <a href="">意见反馈</a>
+                </p>
+                <p>京ICP备13038099号</p>
+                <p><span>© 2004-2015 www.etiantian.org All Rights Reserved.</span>老男孩教育版权所有</p>
+            </div>
+        </div>
+    </div>
+    {% block js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,263 @@
+body {
+    margin: 0 auto;
+    font-family: Arial;
+    _font-family: 宋体,Arial;
+    font-size: 12px;
+}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, figure, div {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+a{
+    cursor:pointer;
+    text-decoration:none;
+}
+/*a:hover{
+    color: #F60 !important;
+    text-decoration: underline;
+}*/
+img{
+    border:none;
+    border-width:0px;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.red{
+    color: #c00 !important;
+}
+
+.m8{
+    margin:8px;
+}
+.mg20{
+	margin:20px;
+}
+.mt0{
+	margin-top:0px !important;
+}
+.mt10{
+	margin-top:10px;
+}
+.mt20{
+	margin-top:20px;
+}
+.mt30{
+	margin-top:30px !important;
+}
+.mr5{
+    margin-right:5px;
+}
+.ml5{
+    margin-left:5px;
+}
+
+.ml10{
+    margin-left:10px;
+}
+.mb0{
+    margin-bottom:0px !important;
+}
+.mb20{
+    margin-bottom:20px;
+}
+.mb10{
+    margin-bottom:10px;
+}
+.pd10{
+	padding:10px !important;
+}
+.pt18{
+	padding-top:18px;
+}
+.pt20{
+	padding-top:20px;
+}
+.pb20{
+	padding-bottom:20px;
+}
+.nbr{
+    border-right:0px;
+}
+.font12{
+	font-size:12px !important;
+}
+.font13{
+	font-size:13px !important;
+}
+.font14{
+	font-size:14px;
+}
+.font16{
+	font-size:16px;
+}
+.bold{
+    font-weight:bold;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.hide{
+    display:none;
+}
+.show{
+     display:table;
+}
+.clearfix{
+    clear:both;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.account-container{
+    margin: 30px 0px;
+}
+.account-container .header{
+    padding:15px 0px;
+}
+
+.account-container .body{
+    border: 1px solid #d7d7d7;
+    padding: 20px 40px;
+    padding-right: 0;
+}
+.account-container .body .logo{
+	width:50%;
+}
+.account-container .body .login{
+	width:50%;	
+	color: #555;
+}
+
+.account-container .body .register{
+    width: 630px;
+    border-right: 1px dashed #e5e5e5;
+    color: #555;
+}
+.account-container .body .register .group,.body .login .group{
+	margin:15px 0px;
+	height:38px;
+	font-size:14px;
+	position:relative;
+
+}
+.account-container .body .register .group .tip,.body .login .group .tip{
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	font-size: 14px;
+    font-weight:normal;
+}
+.account-container .body .register .group label .red,.body .login .group label .red{
+	margin:0 5px;
+}
+
+.account-container .body .register .group input[type='text'],
+.account-container .body .register .group input[type='password'],
+.account-container .body .login .group input[type='text'],
+.account-container .body .login .group input[type='password']{
+	width:245px;
+	height:32px;
+	padding:0 5px 0 5px;
+	border: 1px solid #cccccc;
+	
+}
+.account-container .body .register .group i,.body .login .group i{
+	position: absolute;
+	left: 330px;
+}
+.account-container .body .register .group .i-name,.body .login .group .i-name{
+	height: 16px;
+	top: 10px;
+	width: 16px;
+	
+}
+.account-container .body .register .group .i-pwd,.body .login .group .i-pwd{
+	height: 19px;
+	top: 10px;
+	width: 14px;
+}
+.account-container .body .register .group .i-phone,.body .register .login .i-phone{
+	height: 21px;
+	top: 10px;
+	width: 14px;
+}
+
+.account-container .body .register .group .input-error{
+	font-size:12px;
+	color: #e4393c;
+	display: inline-block;
+	line-height: 32px;
+	height: 32px;
+	width: 260px;
+	padding: 0 5px;
+	background: #FFEBEB;
+	border: 1px solid #ffbdbe;
+}
+
+.account-container .body .login .group .input-error{
+	font-size:10px;
+	position: absolute;
+	color: #e4393c;
+	background: #FFEBEB;
+	border: 1px solid #ffbdbe;
+	display: block;
+	z-index: 10;
+	height: 15px;
+	width: 244px;
+	line-height: 15px;
+	left: 104px;
+    font-weight: normal;
+}
+
+.account-container .body .register .group .checkcode,.body .login .group .checkcode{
+	position:absolute;
+	margin:-20px 0 0 5px;
+}
+.account-container .body .register .group .submit,.body .login .group .submit{
+	background-color: #e4393c;
+	padding:8px 20px;
+	width:246px;
+	color: white;
+	text-align: center;
+	border:1px solid #e4393c;
+}
+
+
+.account-container .body .more{
+    padding:20px;
+}
+.account-container .body .login .go-register{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+}
+.account-container .body .login .go-register a{
+	line-height: 32px;
+	text-align: center;
+	font-size: 14px;
+	background: #7cbe56;
+	width: 115px;
+	height: 32px;
+	display: block;
+	color: #FFF;
+}
+
+
+.account-container .pg-footer{
+	margin:20px 0;
+	color: #555;
+}

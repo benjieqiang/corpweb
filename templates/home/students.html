@@ -1,0 +1,107 @@
+{% extends 'master/layout.html' %}
+{% load myTag %}
+
+{% block title %}学员就业{% endblock %}
+{% block css %}
+    <style>
+        .content_waterfall{
+            padding:60px;
+        }
+        .box_pic{
+            position:relative;
+            width:900px;
+            margin:0 auto;
+        }
+
+        .box_pic .column-flow{
+            padding:15px;
+            width:300px;
+            float:left;
+        }
+        .box_pic .column-flow .grid-boxes-in{
+            padding:0;
+            margin-bottom:30px;
+            border:solid 1px #eee;
+        }
+        .box_pic .column-flow .grid-boxes-in img   {
+            height:200px;
+            width:300px;
+            max-width:100%;
+        }
+        .box_pic .column-flow .grid-boxes-in .grid-boxes-caption{
+            padding:15px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="wrap clearfix">
+        <div class="headline-center text-center">
+            <h2>关于锤子科技</h2>
+            <p>用责任和情怀专注IT教育30年</p>
+            <br>
+            <p>致力于为有若干年工作经验的IT从业人员提供深度、高端的Linux运维相关技术实战培训，以助其在工作上能跳出低薪、低技术含量的泥潭。</p>
+        </div>
+        <div class="content_waterfall">
+            <div class="box_pic">
+                <div class="column-flow" style="width:300px;float:left">
+                    <!--如果forloop.counter/3==1 在这一列-->
+
+                     {% for item in student_detail_list %}
+                        {% if forloop.counter|my_filter:"3,0"  %}
+                            <div class="grid-boxes-in">
+                                <img src="/{{ item.student__pic }}/" alt="">
+                                <div class="grid-boxes-caption">
+                                     <h3>{{ item.student__name }}</h3>
+                                     <p>{{ item.student__company }}</p>
+                                     <p>{{ item.student__salary }}</p>
+                                     <p>{{ item.letter_of_thanks }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+                <div class="column-flow" style="width:300px;float:left">
+                      <!--如果forloop.counter/3==2 在这一列-->
+
+                     {% for item in student_detail_list %}
+                        {% if forloop.counter|my_filter:"3,1"  %}
+                            <div class="grid-boxes-in">
+                                <img src="/{{ item.student__pic }}/" alt="">
+                                <div class="grid-boxes-caption">
+                                     <h3>{{ item.student__name }}</h3>
+                                     <p>{{ item.student__company }}</p>
+                                     <p>{{ item.student__salary }}</p>
+                                     <p>{{ item.letter_of_thanks }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+                <div class="column-flow" style="width:300px;float:left">
+                    <!--如果forloop.counter/3==3 在这一列-->
+
+                     {% for item in student_detail_list %}
+                        {% if forloop.counter|my_filter:"3,2"  %}
+                            <div class="grid-boxes-in">
+                                <img src="/{{ item.student__pic }}/" alt="">
+                                <div class="grid-boxes-caption">
+                                     <h3>{{ item.student__name }}</h3>
+                                     <p>{{ item.student__company }}</p>
+                                     <p>{{ item.student__salary }}</p>
+                                     <p>{{ item.letter_of_thanks }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+
+
+        </div>
+
+        </div>
+    </div>
+{% endblock %}
+{% block js %}{% endblock %}

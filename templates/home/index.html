@@ -1,0 +1,256 @@
+{% extends 'master/layout.html' %}
+{% block title %} 首页{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="/static/plugins/bxSlider1/jquery.bxslider.css">
+    <link rel="stylesheet" href="/static/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <style>
+        #owl-demo .item{
+          margin: 3px;
+        }
+        #owl-demo .item img{
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div>
+    <!--bxslider实现-->
+    <div>
+        <div>
+            <ul class="bxslider">
+            {% for item in bxslider_list %}
+
+            <li>
+                <a href="">
+                    <img style="height:300px;width:100%" src="/{{ item.img }}/" alt="">
+                </a>
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    <div style="background-color: #fafafa;padding-top:10px;padding-bottom:20px;">
+        <div class="wrap">
+            <div class="floor">
+                <div class="floor-title">
+                    <span>最新公告</span>
+                </div>
+                <div class="floor-content clearfix" style="background-color: #FFEEC2;">
+                    <div class="row">
+                        <!--这里写title下的具体内容 源自于bootstrap-->
+                        {% for item in notice_list %}
+                        <div class="col-sm-4 info-blocks">
+
+                            <div class="info-blocks-in">
+                                <h3>{{ item.title }}</h3>
+                                <p style="color:#999999;">
+                                    {{ item.content }}
+                                </p>
+                                <br/>
+                                <a href="/notice-1.html" target="_blank">查看更多</a>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="floor">
+                <div class="floor-title">
+                    <span>课程介绍</span>
+                </div>
+                <div class="floor-content clearfix">
+                    {% for panel in course_list %}
+                        <a class="panel-item" href="">
+                            <div class="service-block service-block-default">
+                                <img style="width:40px;height:40px;" src="/{{ panel.icon }}/" class="img-rounded">
+                                <h2 class="heading-md">{{ panel.title }}</h2>
+                                <p>{{ panel.summary }}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="floor">
+                <div class="floor-title">
+                    <span>学员就业</span>
+                    <a href="/index.html/" class="more">More...</a>
+                </div>
+                <div class="floor-content clearfix">
+                    <!--学员的具体信息从student_detail里拿数据 -->
+                    <div class="col-md-8">
+                        <div class="funny-boxes funny-boxes-top-yellow">
+                            {% for item in student_detail_list %}
+                            <div class="row">
+                                <div class="col-md-4" >
+                                    <img src="/{{ item.student__pic}}/" alt="" style="height:186px;width:160px;">
+                                    <ul style="list-style:none">
+                                        <li>{{ item.student__salary }}</li>
+                                        <li>{{ item.student__company }}</li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <h2>{{ item.student__name }}</h2>
+                                    <p>{{ item.letter_of_thanks }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!--招聘信息 从Recruit拿数据-->
+                    <div class="col-md-4">
+                        <h2 style="margin:10px 0px">招聘信息</h2>
+                        {% for item in recruit_list %}
+                            <div class="col-md-8 title">{{ item.title }}</div>
+                            <div class="col-md-4 content">{{ item.salary }}/月</div>
+                        {% endfor %}
+                    </div>
+                    <!--将学生的就业信息拿到展示-->
+                <div class="row">
+                    <div class="col-md-12 clearfix">
+                       {% for item in student_list %}
+                            <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="/{{ item.pic }}/" alt="..." style="height:160px;width:100%;display:block;">
+                              <div class="caption">
+                                <h3>{{ item.name }}</h3>
+                                <p>{{item.company}}</p>
+                                  <p>￥{{ item.salary }}/月</p>
+                              </div>
+                            </div>
+                            </div>
+                       {% endfor %}
+                    </div>
+
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="floor">
+                <div class="floor-title clearfix">
+                    <span>校园生活</span>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="row team-v3">
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="/static/images/team/img1-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Daniel Wearne</span>
+                                    <small>Technical Director</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="/static/images/team/img5-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Sara Lisbon</span>
+                                    <small>Designer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 sm-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="/static/images/team/img3-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>John Doe</span>
+                                    <small>Developer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team-img">
+                                <img class="img-responsive" src="/static/images/team/img2-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Alice Williams</span>
+                                    <small>Support</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="floor-title clearfix">
+                    <span>企业合作</span>
+                </div>
+
+                <div class="floor-content clearfix">
+                  <div id="owl-demo" class="owl-carousel owl-theme">
+                      <div class="item"><img src="/static/images/asset/clients4/1.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/2.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/3.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/4.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/5.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/6.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/7.png" alt="Owl Image"></div>
+                      <div class="item"><img src="/static/images/asset/clients4/8.png" alt="Owl Image"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script src="/static/plugins/bxslider/js/jquery.bxslider.js"></script>
+    <script src="/static/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript">
+    //用来显示轮播图
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+                  auto: true,
+                  autoControls: false,
+                  pager: true,
+            });
+            $("#owl-demo").owlCarousel({
+
+              autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+              items : 4,
+              itemsDesktop : [1199,3],
+              itemsDesktopSmall : [979,3]
+
+        });
+        })
+
+    </script>
+{% endblock %}

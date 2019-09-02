@@ -1,0 +1,102 @@
+{% extends 'master/layout.html' %}
+{% block title %}
+    在线视频
+{% endblock %}
+{% block css %}
+    <style>
+        .wrap{
+            width:1000px;
+            margin: 0 auto;
+            font-size:12px;
+            font-family: "Microsoft Yahei", "Simsun";
+        }
+        .wrap .headline-center{
+            text-align:center;
+            margin-bottom:60px;
+        }
+        .wrap .search{
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-top: 2px solid #f90;
+        }
+        .wrap .search .filter{
+            border-bottom: 1px;
+            color:#565656;
+            padding:0 10px;
+            overflow:hidden;
+        }
+        .wrap .search .filter dl dt {
+            float:left;
+            width:80px;
+            line-height:22px;
+            padding: 10px 0;
+            color: #333;
+            font-weight: bold;
+            text-align: right;
+        }
+        .wrap .search .filter dl dd {
+            float: left;
+            width:80px;
+            line-height:22px;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .wrap .result{
+            margin-top:20px;
+            background-color: #e4e9f0;
+            height:auto;
+        }
+        .wrap .result .video_result{
+            width:200px;
+            height:200px;
+            float:left;
+        }
+        .wrap .result .video_result img{
+            width:90%;
+            height:150px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="wrap clearfix">
+        <div class="headline-center text-center">
+            <h3>在线视频搜索</h3>
+        </div>
+        <div class="search">
+            <div class="filter">
+                <dl class="clearfix">
+                    <dt>方向：</dt>
+                    {% for item in direction_list %}
+                    <dd>{{ item.name }}</dd>
+                    {% endfor %}
+                </dl>
+                <dl class="clearfix">
+                    <dt>分类：</dt>
+                    {% for item in class_list %}
+                    <dd>{{ item.name }}</dd>
+                    {% endfor %}
+                </dl>
+{#                <dl class="clearfix">#}
+{#                    <dt>难度：</dt>#}
+{#                    {% for item in video_list %}#}
+{#                    <dd>{{ item.level }}</dd>#}
+{#                    {% endfor %}#}
+{#                </dl>#}
+            </div>
+        </div>
+        <div class="result clearfix">
+            <h2>查询结果</h2>
+            {% for item in video_list %}
+                <div  class="video_result clearfix">
+                    <img src="/{{ item.img }}" alt="{{ item.href }}">
+                    <p>{{ item.title }}</p>
+                    <p>{{ item.summary }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

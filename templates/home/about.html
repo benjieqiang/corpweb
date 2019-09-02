@@ -1,0 +1,336 @@
+{% extends 'master/layout.html' %}
+{% block title %}关于我们{% endblock %}
+{% block css %}
+    <style>
+    .bg-gray{
+        background-color:#fafafa;
+        padding-top:20px; /*设置 p 元素的上内边距：*/
+        padding-bottom:20px;
+    }
+    .wrap{
+        width: 980px;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+    .headline-center{
+        text-align:center;
+        margin-bottom:60px;
+
+    }
+    .headline-center h2{
+        margin-bottom:20px;
+        padding-bottom:15px;
+    }
+
+    .headline-center p{
+        font-size:14px;
+    }
+    .tab-menu-box-10{
+    }
+
+    .tab-menu-box-10 .menu ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border-bottom: 3px solid #f90;
+    }
+    .tab-menu-box-10 .menu ul li{
+        font-size: 24px;
+        padding-bottom:20px;
+        list-style: none;
+        text-align:center;
+        cursor:pointer;
+        float:left;
+        width:186px;
+    }
+    .content{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+    .content .col-md-5 img{
+        height:180px;
+        width:100%;
+    }
+    .content .col-md-12 .headline{
+        margin:10px 0 25px 0;
+        border-bottom: 1px dotted #e4e9f0;
+    }
+    .content .col-md-12 .headline h2{
+        margin: 0 auto;
+        padding-bottom: 5px;
+        display:inline-block;
+        border-bottom:2px solid #72c02c;
+    }
+    .active{
+        color:#f90
+    }
+    .hide{
+        display:none;
+    }
+    .intent-text{
+        text-indent:28px;
+        font-size:14px;
+        color:#333;
+    }
+    /* join-us-start */
+     .join-us li{
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #3598db;
+        color: #3598db;
+        border-radius: 5px !important;
+        padding: 5px 10px;
+        cursor: pointer;
+        list-style:none;
+     }
+     .join-us .current,.join-us li:hover{
+       background: #f37b20;
+       color:#fff;
+       border:1px solid #f48430;
+     }
+     .join-detail{
+       background: #f6f6f6;
+       padding: 16px 20px 40px 20px;
+       margin-bottom:40px;
+     }
+     .join-detail h3 {
+       font-size: 24px;
+       font-weight: normal;
+    }
+    .join-detail .join-us-detail dl{
+      text-align: left;
+      margin-top:20px;
+    }
+    .join-detail .join-us-detail dl dt{
+      font-size: 18px;
+      color:#3598db;
+    }
+    .join-detail .join-us-detail dl dt.join-email a{
+      font-size: 14px;
+      color:#f37d24;
+    }
+    .join-detail .join-us-detail dl dt.join-email a:hover{
+      font-size: 14px;
+      color:#f37d24;
+      text-decoration: underline;
+    }
+    .join-detail .join-us-detail dl dt.join-email b{
+      color:#333;
+      font-size: 14px;
+    }
+    .join-detail .join-us-detail dl dd{
+      color:#333;
+      padding-left:35px;
+      line-height: 30px;
+      font-size: 14px;
+    }
+    .join-sort{
+      border-bottom:4px solid #3598db;
+      margin:30px auto;
+    }
+    .title-join{
+      float:left;
+      font-size: 18px;
+      color:#333;
+      margin: 10px 40px;
+      font-weight: normal;
+      padding:5px 0;
+      cursor: pointer;
+    }
+    .join-current{
+      position: relative;
+      color:#3598db;
+    }
+    .join-current i{
+      position: absolute;
+      bottom:-33px;
+      left:8px;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-color: #3598db transparent transparent;
+      border-style: solid dashed dashed dashed;
+    }
+/* join-us-end */
+    .headline{
+        margin:10px 0 25px 0;
+        border-bottom: 1px dotted #e4e9f0;
+    }
+    .headline h2{
+        margin: 0 0 -2px 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #72c02c;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="bg-gray">
+        <div class="wrap clearfix">
+            <div class="headline-center ">
+                <h2>关于老男孩教育</h2>
+                <p>
+                    专注IT运维领域11年 - 铸就中国精英Linux运维培训第一品牌
+                </p>
+                <p>
+                    致力于为有若干年工作经验的IT从业人员提供深度、高端的Linux运维相关技术实战培训，以助其在工作上能跳出低薪、低技术含量的泥潭。
+                </p>
+            </div>
+            <div class="tab-menu-box-10">
+                   <div class="menu">
+                       <ul id="tab-menu-title" class="clearfix">
+                           <li class="active" content-to="1">公司简介</li>
+                           <li content-to="2">媒体报道</li>
+                           <li content-to="3">人才招聘</li>
+                           <li content-to="4">学习环境</li>
+                           <li content-to="5">联系我们</li>
+                       </ul>
+                   </div>
+                   <div id="tab-menu-body" class="content">
+                       <div content="1" >
+                           <div>
+                               <p class="col-md-7 intent-text">
+                                   老男孩LINUX是由老男孩老师成立于2007年，致力于为有若干年工作经验的IT从业人员提供深度、高端的Linux运维相关技术实战培训，以助其在工作上能跳出低薪、低技术含量的泥潭。从成立到现在，在没有花过一分钱广告费，几乎全部靠口碑传播的基础上，从老男孩毕业的面授学员已达632名，网络班学员1000多名，就不全面的统计，目前已有30多位学员在国内外知名互联网公司上升到IT总监、运维主管的职位，另有上百位学员在阿里、腾讯、百度、小米、京东、360公司、亚马逊、新浪、SOHU、网易、民生银行、华夏银行等众多知名企业担任资深系统工程师、架构师等相关职位。
+                               </p>
+                               <div class="col-md-5">
+                                   <img src="/static/images/bg/1.jpg">
+                               </div>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="headline">
+                                   <h2>成长故事</h2>
+                               </div>
+                               <div>
+                                   <p class="intent-text">在混乱的IT培训行业里，各培训机构质量参差不齐，很多学校现在是根本不在乎课程质量，随便找个刚工作一两年普通工程师包装一下，就变成名师给人讲课，许多学生之前没做过相关IT实际工作，对课程内容好坏也没法直观判断，结果毕业后学到的东西只能从事最低级、基础的系统管理员的工作，平均三四千的月薪只能维持在北上广基本的生存。</p>
+                                   <p class="intent-text">N多这样的培训机构带坏了整个行业的名声，导致大家现在对IT培训普遍抱有一个态度，就是烂、骗钱。对于这样的结果，我们也深感无奈，躺着也中枪，真是很无奈，我们唯一能做的就是以身作则，真心关注、帮助每一位学员，努力让他们能够真正学到企业实用的知识和技能，当他们毕业后，能够找到一份满意的工作是对我们最好的认可。</p>
+                                   <p class="intent-text">到现在为止，我们的主要招生来源还是通过学生互相介绍，以及老男孩老师自己的博客来拉客☺，坚持不花钱做广告也导致我们的知名度没有某些同行机构大，但有的时候，少即是多、小即是大，机构小一点，能让我们倍加珍惜每个学生对我们的信任、能让我们有足够的精力关注到每位学员，如果培训机构做大就会变质的话，那我们宁愿一直做个小机构。</p>
+                                   <p class="intent-text">老男孩培训目前依然位于昌平沙河，距离市中心稍远，有些学生抱怨学校较远，我们也曾提议往近的地方搬一搬，但老男孩老师坚持认为，学校远也是有好处的，一是可以帮学生省掉近三分之一的学费，二是可以刷掉一些不够刻苦的学生，所以呢，你懂的，老男孩培训现在依然在沙河。</p>
+                                   <p class="intent-text">即便我们相信我们能提供业内最高质量的课程，但我们依然不能保证每个学员都学有所成，学习是双方的事情，学校再努力的教，学生不主动、不努力、不上心，那也肯定学不会，即便送他去北大、清华也是如此。我们不想招这样的学生，招来我们也教不好，因此，我们的部分课程已经开始开展“劝退行动”，在每期课程开始的前几天，通过对每个学员学习态度、努力程度、学习能力、作业完成度等做综合考评，对于不符合要求的学员，实行劝退，退还学费，扫地出门。可以说，我们是业内第一家敢于做这样事情的机构，为什么呢？你懂的，劝退一个学生，就少挣一笔钱呀，到嘴里的肉再吐出来是何等难受。不过，我们做到了，现在每期都会劝退掉几个学员，所以，如果你来老男孩教育学习但却不努力的话，请做好被刷掉的准备。</p>
+                               </div>
+                           </div>
+                       </div>
+                       <div content="2" class="hide">
+                           <div class="col-md-12" style="text-align:center">
+                                <h4><strong>老男孩教育电视台专访视频</strong></h4>
+                                <p>2015年11月11日，老男孩教育受邀接受教育电视台专访</p>
+                           </div>
+                           <div class="col-md-12" align="center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LykS0TRSHLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           </div>
+                       </div>
+                       <div content="3" class="hide">
+                             <div class="join-order">
+                                 <div class="join-us clearfix">
+                                     <li a="1">资深市场推广员</li>
+                                     <li a="2">资深Linux运维讲师</li>
+                                 </div>
+                                 <div class="join-detail">
+                                 <div class="join-us-detail" b="1">
+                                    <h3>资深市场推广员</h3>
+                                     <dl>
+                                         <dt>职位描述：</dt>
+                                         <dd>1.负责公司现有产品优化和日常运营；</dd>
+                                         <dd>2.新产品研发和前端新技术的应用，带来更好的用户体验。</dd>
+                                     </dl>
+                                     <dl>
+                                         <dt>职位说明：</dt>
+                                         <dd>1.精通html，css，对盒子模型有深刻理解；</dd>
+                                         <dd>2.熟知各主流浏览器（ie6+/Chrome/Firefox/Safari）兼容性问题及相应解决方案</dd>
+                                         <dd>3.熟悉js原理及常用框架（jquery），能独立完成常用的js交互效果；</dd>
+                                         <dd>4.了解html5和css3，并有相关作品；</dd>
+                                         <dd>5.良好的审美能力、界面风格、色彩搭配及框架结构等有一定的把控能力；</dd>
+                                         <dd>6.熟悉github相关操作优先。</dd>
+                                     </dl>
+                                     <dl>
+                                         <dt>福利待遇：</dt>
+                                         <dd>1.长期激励：公司期权；</dd>
+                                         <dd>2.福利：享受法定节假日、公司婚假、产假，相关社保，公司旅游等。</dd>
+                                     </dl>
+                                     <dl><dt>请将简历发送至招聘邮箱 hyran@126.com 标题请注明"应聘+职位+姓名</dt></dl>
+                                 </div>
+                                 <div class="join-us-detail hide" b="2">
+                                    <h3>资深Linux工程师</h3>
+
+                                     <dl>
+                                         <dt>职位说明：</dt>
+                                         <dd>1.本科及以上学历，工作经验3年以上；</dd>
+                                         <dd>2.熟悉网站与系统建设流程，有较丰富的网站、系统设计和制作经验；</dd>
+                                         <dd>3.有扎实的美术功底和较强的设计能力，精通Photoshop、Flash、Dreamweaver、PPT等设计工具；</dd>
+                                         <dd>4.了解html5和css3，并有相关作品；</dd>
+                                         <dd>5.良好的审美能力、界面风格、色彩搭配及框架结构等有一定的把控能力；</dd>
+                                         <dd>6.熟悉github相关操作优先。</dd>
+                                     </dl>
+
+                                     </div>
+                                </div>
+                                 </div>
+                       </div>
+                       <div content="4" class="hide">4</div>
+                       <div content="5" class="hide">
+                           <div class="headline clearfix">
+                               <h2>北京总部</h2>
+                               <div class="col-md-6" style="float:left;">
+                                   <h4>学校地址</h4>
+                                   <p>北京市昌平区沙河青年创业大厦15层</p>
+                                   <p>报名电话：010-60747396(工作时间)</p>
+                                   <h4>周边交通</h4>
+                                   <p>地铁站：昌平线沙河站B口；公交线路：670路、专51路、昌52、昌66等</p>
+                               </div>
+                               <div class="col-md-6" style="float:left;">
+                                   <div id="contact-map-1" style="height:300px;">
+                                     <div><a target="_blank" href="http://apis.map.qq.com/uri/v1/marker?marker=coord:40.149730,116.29176;title:老男孩教育;addr:沙河青年创业大厦15层"><i class="fa fa-search-plus"></i> 查看完整地图</a></div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script>
+      //点击title,拿到对应title的索引，然后用这个索引去body里取数据；
+    $('#tab-menu-title').children().click(function () {
+        //console.log(this);
+        $(this).addClass('active').siblings().removeClass('active');
+        var target = $(this).attr('content-to');
+        //console.log(target); //拿到点击的title对应的值；
+        $('#tab-menu-body').children("[content='"+target+"']").removeClass('hide').siblings().addClass('hide')
+        //title=x,就去取x下的content;
+    })
+
+    $('.join-us').children().click(function () {
+        {#console.log(this);#}
+
+        var target = $(this).attr('a');
+        console.log(target);
+
+        $('.join-detail').children("[b='"+target+"']").removeClass('hide').siblings().addClass('hide');
+        console.log(22332323);
+    })
+    //联系我们开始
+    $(function(){
+      initMap(40.149730,116.291760,'contact-map-1');
+     });
+
+    function initMap(argx,argy,mapid) {
+        var center = new qq.maps.LatLng(argx, argy);
+        var map = new qq.maps.Map(document.getElementById(mapid), {
+            // 地图的中心地理坐标。
+            //center: new qq.maps.LatLng(39.916527,116.397128)
+            center: center,
+            zoom: 11,
+            mapTypeId: qq.maps.MapTypeId.ROADMAP
+        });
+        var marker = new qq.maps.Marker({
+            position: center,
+            map: map
+        });
+     }
+
+    </script>
+{% endblock %}

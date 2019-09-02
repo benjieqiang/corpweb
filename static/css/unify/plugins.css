@@ -1,0 +1,458 @@
+    /*Colored Content Boxes
+------------------------------------*/
+.service-block {
+  padding: 15px 30px;
+  text-align: center;
+  margin-bottom: 15px;
+    width: 316px;
+    height: 185px;
+}
+
+.service-block p,
+.service-block h2 {
+  color: #fff;
+    margin-top: 10px;
+
+}
+
+.service-block h2 a:hover{
+  text-decoration: none;
+}
+
+.service-block-light,
+.service-block-default {
+  background: #FFFFFF;
+  border: solid 1px #eee;
+}
+
+.service-block-default:hover {
+  box-shadow: 0 0 10px #eee;
+}
+
+.service-block-light p,
+.service-block-light h2,
+.service-block-default p,
+.service-block-default h2 {
+  color: #555;
+}
+
+.service-block-u {
+  background: #72c02c;
+}
+.service-block-blue {
+  background: #3498db;
+}
+.service-block-red {
+  background: #e74c3c;
+}
+.service-block-sea {
+  background: #1abc9c;
+}
+.service-block-grey {
+  background: #95a5a6;
+}
+.service-block-yellow {
+  background: #f1c40f;
+}
+.service-block-orange {
+  background: #e67e22;
+}
+.service-block-green {
+  background: #2ecc71;
+}
+.service-block-purple {
+  background: #9b6bcc;
+}
+.service-block-aqua {
+  background: #27d7e7;
+}
+.service-block-brown {
+  background: #9c8061;
+}
+.service-block-dark-blue {
+  background: #4765a0;
+}
+.service-block-light-green {
+  background: #79d5b3;
+}
+.service-block-dark {
+  background: #555;
+}
+.service-block-light {
+  background: #ecf0f1;
+}
+    i.icon-custom {
+  color: #555;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: inline-block;
+  border: solid 1px #555;
+}
+
+i.icon-sm {
+   width: 35px;
+   height: 35px;
+   font-size: 16px;
+   line-height: 35px;
+}
+
+i.icon-md {
+   width: 55px;
+   height: 55px;
+   font-size: 22px;
+   line-height: 55px;
+}
+
+i.icon-lg {
+  width: 60px;
+  height: 60px;
+  font-size: 31px;
+  line-height: 60px;
+  margin-bottom: 10px;
+}
+
+i.icon-2x {
+  font-size: 30px;
+}
+i.icon-3x {
+  font-size: 40px;
+}
+i.icon-4x {
+  font-size: 50px;
+}
+
+/*Line Icons*/
+i.icon-line {
+  font-size: 17px;
+}
+i.icon-sm.icon-line {
+  font-size: 14px;
+}
+i.icon-md.icon-line {
+  font-size: 22px;
+}
+i.icon-lg.icon-line {
+  font-size: 28px;
+}
+
+i.icon-2x.icon-line {
+  font-size: 27px;
+}
+i.icon-3x.icon-line {
+  font-size: 36px;
+}
+i.icon-4x.icon-line {
+  font-size: 47px;
+}
+    .rounded-x {
+    border-radius: 50% !important;
+}
+    i.icon-bg-u, i.icon-bg-red, i.icon-bg-sea, i.icon-bg-dark, i.icon-bg-darker, i.icon-bg-grey, i.icon-bg-blue, i.icon-bg-green, i.icon-bg-yellow, i.icon-bg-orange, i.icon-bg-purple, i.icon-bg-aqua, i.icon-bg-brown, i.icon-bg-dark-blue, i.icon-bg-light-grey, i.icon-bg-light-green {
+    color: #fff;
+    border-color: transparent;
+}
+    i.icon-bg-dark {
+    background: #555;
+}
+
+
+
+
+
+    .info-blocks i.icon-info-blocks {
+    float: left;
+    color: #777;
+    font-size: 30px;
+    min-width: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+    .info-blocks .info-blocks-in {
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+
+
+    /*Funny Boxes
+------------------------------------*/
+.funny-boxes {
+  background: #f7f7f7;
+  padding: 20px 20px 15px;
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+
+.funny-boxes h2 {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.funny-boxes h2 a {
+  color: #555;
+}
+
+.funny-boxes p a {
+  color: #72c02c;
+}
+
+.funny-boxes .funny-boxes-img li {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.funny-boxes .funny-boxes-img li i {
+  color: #72c02c;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+  .funny-boxes .funny-boxes-img li {
+    display: inline-block;
+  }
+}
+
+.funny-boxes .funny-boxes-img img {
+  margin: 5px 10px 15px 0;
+}
+
+.funny-boxes ul.funny-boxes-rating li {
+  display: inline-block;
+}
+
+.funny-boxes ul.funny-boxes-rating li i {
+  color: #f8be2c;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.funny-boxes ul.funny-boxes-rating li i:hover {
+  color: #f8be2c;
+}
+
+/*Funny Colored Boxes*/
+.funny-boxes-colored p,
+.funny-boxes-colored h2 a,
+.funny-boxes-colored .funny-boxes-img li,
+.funny-boxes-colored .funny-boxes-img li i {
+  color: #fff;
+}
+
+/*Red Funny Box*/
+.funny-boxes-red {
+  background: #e74c3c;
+}
+
+/*Dark Red Funny Box*/
+.funny-boxes-purple {
+  background: #9b6bcc;
+}
+
+/*Blue Funny Box*/
+.funny-boxes-blue {
+  background: #3498db;
+}
+
+/*Grey Funny Box*/
+.funny-boxes-grey {
+  background: #95a5a6;
+}
+
+/*Turquoise Funny Box*/
+.funny-boxes-sea {
+  background: #1abc9c;
+}
+
+/*Turquoise Top Bordered Funny Box*/
+.funny-boxes-top-sea {
+  border-top: solid 2px #1abc9c;
+}
+
+.funny-boxes-top-sea:hover {
+  border-top-color: #16a085;
+}
+
+/*Yellow Top Bordered Funny Box**/
+.funny-boxes-top-yellow {
+  border-top: solid 2px #f1c40f;
+}
+
+.funny-boxes-top-yellow:hover {
+  border-top-color: #f39c12;
+}
+
+/*Red Top Bordered Funny Box**/
+.funny-boxes-top-red {
+  border-top: solid 2px #e74c3c;
+}
+
+.funny-boxes-top-red:hover {
+  border-top-color: #c0392b;
+}
+
+/*Purple Top Bordered Funny Box**/
+.funny-boxes-top-purple {
+  border-top: solid 2px #9b6bcc;
+}
+
+.funny-boxes-top-purple:hover {
+  border-top-color: #814fb5;
+}
+
+/*Orange Left Bordered Funny Box**/
+.funny-boxes-left-orange {
+  border-left: solid 2px #e67e22;
+}
+
+.funny-boxes-left-orange:hover {
+  border-left-color: #d35400;
+}
+
+/*Green Left Bordered Funny Box**/
+.funny-boxes-left-green {
+  border-left: solid 2px #72c02c;
+}
+
+.funny-boxes-left-green:hover {
+  border-left-color: #5fb611;
+}
+
+/*Blue Left Bordered Funny Box**/
+.funny-boxes-left-blue {
+  border-left: solid 2px #3498db;
+}
+
+.funny-boxes-left-blue:hover {
+  border-left-color: #2980b9;
+}
+
+/*Dark Left Bordered Funny Box**/
+.funny-boxes-left-dark {
+  border-left: solid 2px #555;
+}
+
+.funny-boxes-left-dark:hover {
+  border-left-color: #333;
+}
+
+
+
+    /*Block Headline*/
+.headline {
+  display: block;
+  margin: 10px 0 25px 0;
+  border-bottom: 1px dotted #e4e9f0;
+}
+
+.headline h2 {
+  font-size: 22px;
+}
+
+.headline h2,
+.headline h3,
+.headline h4 {
+  margin: 0 0 -2px 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid #72c02c;
+}
+
+.headline-md {
+  margin-bottom: 15px;
+}
+
+.headline-md h2 {
+  font-size: 21px;
+}
+
+/*Heading Options*/
+.heading {
+  text-align: center;
+}
+
+.heading h2 {
+  padding: 0 12px;
+  position: relative;
+  display: inline-block;
+  line-height: 34px !important; /*For Tagline Boxes*/
+}
+
+.heading h2:before,
+.heading h2:after {
+  content: ' ';
+  width: 70%;
+  position: absolute;
+  border-width: 1px;
+  border-color: #bbb;
+}
+
+.heading h2:before {
+  right: 100%;
+}
+
+.heading h2:after {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .heading h2:before,
+  .heading h2:after {
+    width: 20%;
+  }
+}
+
+/*Headline v1*/
+.heading-v1 h2:before,
+.heading-v1 h2:after {
+  top: 15px;
+  height: 6px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+/*Headline v2*/
+.heading-v2 h2:before,
+.heading-v2 h2:after {
+  top: 15px;
+  height: 6px;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
+
+/*Headline v3*/
+.heading-v3 h2:before,
+.heading-v3 h2:after {
+  top: 15px;
+  height: 6px;
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+}
+
+/*Headline v4*/
+.heading-v4 h2:before,
+.heading-v4 h2:after {
+  top: 17px;
+  border-bottom-style: solid;
+}
+
+/*Headline v5*/
+.heading-v5 h2:before,
+.heading-v5 h2:after {
+  top: 17px;
+  border-bottom-style: dashed;
+}
+
+/*Headline v6*/
+.heading-v6 h2:before,
+.heading-v6 h2:after {
+  top: 17px;
+  border-bottom-style: dotted;
+}
