@@ -14,10 +14,10 @@
 
 ### 运行环境
 
-> - **Python Version：**Python3.5
-> - **Django Version:** Django2.1
-> - **开发工具:**Pycharm 2018
-> - **数据库:**Django默认的sqlite3
+- **Python Version:** Python3.5
+- **Django Version:** Django2.1
+- **开发工具:** Pycharm 2018
+- **数据库:** Django默认的sqlite3
 
 ### 下载运行
 
@@ -37,8 +37,8 @@
 
 瀑布流
 
-![1567420560595](https://raw.githubusercontent.com/benjieqiang/images/master/1567420560595.png)
+![瀑布流](https://raw.githubusercontent.com/benjieqiang/images/master/1567420560595.png)
 
 学员就业
 
-![1567420585295](https://raw.githubusercontent.com/benjieqiang/images/master/1567420585295.png)
+![学员就业](https://raw.githubusercontent.com/benjieqiang/images/master/1567420585295.png)
